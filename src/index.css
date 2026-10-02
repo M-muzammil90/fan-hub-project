@@ -1,0 +1,227 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-display: 'Syne', 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    font-family: var(--font-sans);
+    --bg-page: #050507;
+    --text-page: #ffffff;
+    color-scheme: dark;
+  }
+
+  html.dark {
+    --bg-page: #050507;
+    --text-page: #ffffff;
+    color-scheme: dark;
+  }
+
+  html:not(.dark) {
+    --bg-page: #fdf2f4;
+    --text-page: #1a0509;
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html.font-size-small {
+    font-size: 14px;
+  }
+
+  html.font-size-normal {
+    font-size: 16px;
+  }
+
+  html.font-size-large {
+    font-size: 18px;
+  }
+
+  body {
+    background-color: var(--bg-page);
+    color: var(--text-page);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  /* Light mode full screen styling */
+  html:not(.dark) {
+    color-scheme: light;
+  }
+
+  html:not(.dark) header {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    border-bottom-color: rgba(244, 63, 94, 0.15) !important;
+  }
+
+  html:not(.dark) aside {
+    background-color: #ffffff !important;
+    border-right-color: rgba(244, 63, 94, 0.15) !important;
+  }
+
+  html:not(.dark) footer {
+    background-color: #fdf2f4 !important;
+    border-top-color: rgba(244, 63, 94, 0.15) !important;
+    color: #4c1d2e !important;
+  }
+
+  /* Override dark blue backgrounds */
+  html:not(.dark) .bg-\[\#080b12\],
+  html:not(.dark) .bg-\[\#060913\],
+  html:not(.dark) .bg-\[\#070911\],
+  html:not(.dark) .bg-\[\#060a14\] {
+    background-color: #fdf2f4 !important;
+  }
+
+  /* Override dark red/black card backgrounds */
+  html:not(.dark) .bg-\[\#0a0204\],
+  html:not(.dark) .bg-\[\#150508\],
+  html:not(.dark) .bg-\[\#1a0509\],
+  html:not(.dark) .bg-\[\#040102\],
+  html:not(.dark) .bg-\[\#090d18\],
+  html:not(.dark) .bg-\[\#0c101d\],
+  html:not(.dark) .bg-\[\#0a0f1d\],
+  html:not(.dark) .bg-\[\#070b16\]\/95,
+  html:not(.dark) .bg-\[\#0e1424\],
+  html:not(.dark) .bg-\[\#060a14\],
+  html:not(.dark) .bg-\[\#090b10\],
+  html:not(.dark) .bg-\[\#12080c\] {
+    background-color: #ffffff !important;
+    background-image: none !important;
+    box-shadow: 0 8px 30px -4px rgba(225, 29, 72, 0.08) !important;
+  }
+
+  /* Override dark borders */
+  html:not(.dark) .border-white\/5,
+  html:not(.dark) .border-white\/10,
+  html:not(.dark) .border-white\/15,
+  html:not(.dark) .border-white\/20,
+  html:not(.dark) .border-white\/\[0\.07\],
+  html:not(.dark) .border-white\/\[0\.08\] {
+    border-color: rgba(244, 63, 94, 0.15) !important;
+  }
+
+  /* (Removed global text-zinc overrides to fix banner text legibility) */
+
+  /* Target specific cards for text color flipping */
+  html:not(.dark) .bg-\[\#0a0204\] h1,
+  html:not(.dark) .bg-\[\#0a0204\] h2,
+  html:not(.dark) .bg-\[\#0a0204\] h3,
+  html:not(.dark) .bg-\[\#0a0204\] h4,
+  html:not(.dark) .bg-\[\#0a0204\] p,
+  html:not(.dark) .bg-\[\#150508\] h1,
+  html:not(.dark) .bg-\[\#150508\] h2,
+  html:not(.dark) .bg-\[\#150508\] h3,
+  html:not(.dark) .bg-\[\#150508\] h4,
+  html:not(.dark) .bg-\[\#150508\] p {
+    color: #1a0509 !important;
+  }
+
+  html:not(.dark) .group:hover>h3,
+  html:not(.dark) .group:hover>h4 {
+    color: #e11d48 !important;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(156, 163, 175, 0.35);
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(156, 163, 175, 0.55);
+  }
+}
+
+/* Hide scrollbars for smooth touch carousels */
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* Device Responsive Utilities & Safe Area Support */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .mb-safe {
+    margin-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+@keyframes heroCopy {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroKenBurns {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.08);
+  }
+}
+
+.hero-kenburns {
+  animation: heroKenBurns 8s ease-out forwards;
+  will-change: transform;
+}
+
+/* Ensure smooth image rendering across Retina / High-DPI screens */
+img {
+  content-visibility: auto;
+}
+
+/* Interactive touch improvements */
+button,
+a {
+  touch-action: manipulation;
+}
+
+/* Admin console stays black + red even if the public site is in light mode */
+html .admin-shell {
+  background-color: #000000 !important;
+  color: #fafafa !important;
+}
+
+html .admin-shell header {
+  background-color: #000000 !important;
+  border-bottom-color: rgba(220, 38, 38, 0.3) !important;
+}
+
+html .admin-shell aside {
+  background-color: #09090b !important;
+  border-right-color: rgba(220, 38, 38, 0.2) !important;
+}
+
+html .admin-shell main {
+  background-color: #000000 !important;
+}
