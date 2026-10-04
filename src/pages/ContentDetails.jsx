@@ -204,7 +204,7 @@ export default function ContentDetails() {
               </div>
             ) : isPlaying ? (
               <CustomVideoPlayer
-                src={content.mediaUrl || 'https://www.w3schools.com/html/mov_bbb.mp4'}
+                src={content.mediaUrl || 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'}
                 poster={content.thumbnail || content.backdrop}
                 title={content.title}
                 autoPlay={true}

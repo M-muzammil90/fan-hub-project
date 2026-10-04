@@ -223,7 +223,7 @@ export default function CategoryDetails() {
           image: item.backdrop || item.thumbnail || item.mediaUrl || heroSlidesData[0].image,
           characterArt: item.backdrop || item.thumbnail || item.mediaUrl || heroSlidesData[0].characterArt,
           link: item.link || (isSeries ? `/series/${item.slug || item._id}` : `/content/${item.slug || item._id}`),
-          videoUrl: item.mediaUrl || 'https://www.w3schools.com/html/mov_bbb.mp4'
+          videoUrl: item.mediaUrl || 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
         };
       });
     }
@@ -246,7 +246,7 @@ export default function CategoryDetails() {
         duration: '2h 35m',
         image: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=800&auto=format&fit=crop&q=80',
         link: '/content/infinity-castle',
-        videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4'
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
       },
       {
         id: 'mock-2',
@@ -257,7 +257,7 @@ export default function CategoryDetails() {
         duration: '2h 20m',
         image: 'https://images.unsplash.com/photo-1635863138275-d9b33299680b?w=800&auto=format&fit=crop&q=80',
         link: '/content/spider-man',
-        videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4'
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
       },
       {
         id: 'mock-3',
@@ -268,7 +268,7 @@ export default function CategoryDetails() {
         duration: '24m/ep',
         image: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?w=800&auto=format&fit=crop&q=80',
         link: '/content/naruto-shippuden',
-        videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4'
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
       },
       {
         id: 'mock-4',
@@ -279,7 +279,7 @@ export default function CategoryDetails() {
         duration: '2h 02m',
         image: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=800&auto=format&fit=crop&q=80',
         link: '/content/joker',
-        videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4'
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
       }
     ];
   }, [contentList]);
@@ -292,42 +292,42 @@ export default function CategoryDetails() {
         title: 'Attack on Titan',
         rating: '9.3',
         image: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?w=600&auto=format&fit=crop&q=80',
-        videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4'
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
       },
       {
         id: 'tr-2',
         title: 'Demon Slayer',
         rating: '9.1',
         image: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=600&auto=format&fit=crop&q=80',
-        videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4'
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
       },
       {
         id: 'tr-3',
         title: 'One Piece',
         rating: '9.0',
         image: 'https://images.unsplash.com/photo-1563089145-599997674d42?w=600&auto=format&fit=crop&q=80',
-        videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4'
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
       },
       {
         id: 'tr-4',
         title: 'Jujutsu Kaisen',
         rating: '8.8',
         image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&auto=format&fit=crop&q=80',
-        videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4'
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
       },
       {
         id: 'tr-5',
         title: 'Death Note',
         rating: '8.6',
         image: 'https://images.unsplash.com/photo-1618336753974-aae8e04506aa?w=600&auto=format&fit=crop&q=80',
-        videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4'
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
       },
       {
         id: 'tr-6',
         title: 'Dragon Ball Super',
         rating: '8.5',
         image: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?w=600&auto=format&fit=crop&q=80',
-        videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4'
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
       }
     ];
   }, []);
@@ -364,7 +364,7 @@ export default function CategoryDetails() {
           setActiveVideoModal({
             title: media.title,
             subtitle: media.subtitle,
-            url: media.videoUrl || 'https://www.w3schools.com/html/mov_bbb.mp4'
+            url: media.videoUrl || 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
           })
         }
       />
@@ -457,7 +457,7 @@ export default function CategoryDetails() {
                   onPlay={(media) =>
                     setActiveVideoModal({
                       title: media.title,
-                      url: media.videoUrl || media.mediaUrl || 'https://www.w3schools.com/html/mov_bbb.mp4'
+                      url: media.videoUrl || media.mediaUrl || 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
                     })
                   }
                 />
@@ -500,7 +500,7 @@ export default function CategoryDetails() {
                   onPlay={(media) =>
                     setActiveVideoModal({
                       title: media.title,
-                      url: media.videoUrl || 'https://www.w3schools.com/html/mov_bbb.mp4'
+                      url: media.videoUrl || 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
                     })
                   }
                 />

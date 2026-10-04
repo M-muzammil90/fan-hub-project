@@ -23,7 +23,7 @@ export const initialContent = [
     imdbRating: '9.0',
     language: 'Japanese / English Sub',
     streamQuality: '4K Ultra HDR',
-    videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
+    videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
     episodeNumber: 'Episode 1120'
   },
   {
@@ -50,7 +50,7 @@ export const initialContent = [
     imdbRating: '9.1',
     language: 'English',
     streamQuality: '4K 60FPS',
-    videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
+    videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
     episodeNumber: 'Chapter 7'
   },
   {
@@ -77,7 +77,7 @@ export const initialContent = [
     imdbRating: '9.0',
     language: 'English',
     streamQuality: '4K IMAX',
-    videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
+    videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
     episodeNumber: 'Theatrical Cut'
   },
   {
@@ -104,7 +104,7 @@ export const initialContent = [
     imdbRating: '8.7',
     language: 'English / Korean',
     streamQuality: '4K HDR',
-    videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
+    videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
     episodeNumber: 'Season 1'
   },
   {
@@ -131,7 +131,7 @@ export const initialContent = [
     imdbRating: '8.5',
     language: 'Japanese / English Sub',
     streamQuality: '4K Ultra HDR',
-    videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
+    videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
     episodeNumber: 'Episode 12'
   },
   {
@@ -158,7 +158,7 @@ export const initialContent = [
     imdbRating: '8.8',
     language: 'Korean / English',
     streamQuality: '4K Stage Audio',
-    videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
+    videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
     episodeNumber: 'World Tour Finale'
   },
   {

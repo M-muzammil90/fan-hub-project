@@ -73,7 +73,7 @@ export default function Media() {
             releaseDate: item.releaseDate ? new Date(item.releaseDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '2025',
             rating: item.averageRating ? Number(item.averageRating).toFixed(1) : (item.rating ? String(item.rating) : '9.4'),
             thumbnail: item.backdrop || item.thumbnail || item.poster || item.mediaUrl || 'https://images.unsplash.com/photo-1578632767115-351597cf2477?w=800&auto=format&fit=crop&q=80',
-            videoUrl: item.mediaUrl || item.trailerUrl || 'https://www.w3schools.com/html/mov_bbb.mp4',
+            videoUrl: item.mediaUrl || item.trailerUrl || 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
             description: item.description || item.overview || `Official streaming preview for ${item.title}. Available in full high definition on FanHub Plus.`,
             link: link
           };
@@ -368,7 +368,7 @@ export default function Media() {
                     onClick={() =>
                       setSelectedVideo({
                         title: track.title,
-                        videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
+                        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
                         description: `Playing ${track.title} by ${track.artist}`
                       })
                     }
@@ -395,6 +395,8 @@ export default function Media() {
               src={selectedVideo?.videoUrl}
               controls
               autoPlay
+              preload="auto"
+              playsInline
               className="w-full h-full object-contain"
             />
           </div>

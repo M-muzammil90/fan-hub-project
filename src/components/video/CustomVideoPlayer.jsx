@@ -216,6 +216,31 @@ export default function CustomVideoPlayer({
 
   const progressPercent = duration > 0 ? (currentTime / duration) * 100 : 0;
 
+  // Instant video buffering & playback optimization when src changes
+  useEffect(() => {
+    if (videoRef.current && src) {
+      videoRef.current.load();
+      if (autoPlay) {
+        const promise = videoRef.current.play();
+        if (promise !== undefined) {
+          promise
+            .then(() => setIsPlaying(true))
+            .catch(() => {
+              // Fallback to muted autoplay if browser blocks sound autoplay
+              if (videoRef.current) {
+                videoRef.current.muted = true;
+                setIsMuted(true);
+                videoRef.current
+                  .play()
+                  .then(() => setIsPlaying(true))
+                  .catch(() => setIsPlaying(false));
+              }
+            });
+        }
+      }
+    }
+  }, [src, autoPlay]);
+
   return (
     <div
       ref={containerRef}
@@ -229,6 +254,9 @@ export default function CustomVideoPlayer({
         src={src}
         poster={poster}
         playsInline
+        preload="auto"
+        autoPlay={autoPlay}
+        muted={isMuted}
         onTimeUpdate={handleTimeUpdate}
         onLoadedMetadata={handleLoadedMetadata}
         onEnded={() => {

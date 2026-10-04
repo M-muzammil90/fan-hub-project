@@ -317,7 +317,7 @@ export default function Home() {
             image: bgImg,
             characterArt: bgImg,
             link: `/content/${item.slug || item._id}`,
-            videoUrl: item.mediaUrl || 'https://www.w3schools.com/html/mov_bbb.mp4',
+            videoUrl: item.mediaUrl || 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
             rating: item.averageRating && item.averageRating > 0 ? Number(item.averageRating).toFixed(1) : (item.rating ? String(item.rating) : '9.0'),
             year: item.releaseDate ? new Date(item.releaseDate).getFullYear() : '2025',
             genres: Array.isArray(item.genre) ? item.genre : [item.genre].filter(Boolean)
@@ -338,7 +338,7 @@ export default function Home() {
             image: bgImg,
             characterArt: bgImg,
             link: `/series/${ser.slug || ser._id}`,
-            videoUrl: ser.trailerUrl || 'https://www.w3schools.com/html/mov_bbb.mp4',
+            videoUrl: ser.trailerUrl || 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
             rating: ser.rating ? String(ser.rating) : '9.5',
             year: ser.releaseYear || '2025',
             genres: ser.genres || ['Series']
@@ -360,7 +360,7 @@ export default function Home() {
             image: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=1600&auto=format&fit=crop&q=85',
             characterArt: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=1200&auto=format&fit=crop&q=85',
             link: '/category/anime',
-            videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
+            videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
             rating: '9.8',
             year: '2026'
           }

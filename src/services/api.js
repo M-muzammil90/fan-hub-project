@@ -1,4 +1,8 @@
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const API_BASE =
+  import.meta.env.VITE_API_URL ||
+  (typeof window !== 'undefined' && window.location.hostname.includes('vercel.app')
+    ? 'https://fan-hub-backend-sooty.vercel.app/api'
+    : 'http://localhost:5000/api');
 
 /**
  * Standard fetch wrapper supporting JSON & FormData with JWT Authorization

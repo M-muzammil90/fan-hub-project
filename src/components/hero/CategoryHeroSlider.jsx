@@ -36,7 +36,7 @@ export default function CategoryHeroSlider({ slides = [], onWatch, defaultCatego
       image: 'https://images.unsplash.com/photo-1635863138275-d9b33299680b?w=1600&auto=format&fit=crop&q=85',
       characterArt: 'https://images.unsplash.com/photo-1635863138275-d9b33299680b?w=1200&auto=format&fit=crop&q=85',
       link: '/content/spider-man',
-      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4'
+      videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
     },
     {
       id: 'cat-slide-2',
@@ -51,7 +51,7 @@ export default function CategoryHeroSlider({ slides = [], onWatch, defaultCatego
       image: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=1600&auto=format&fit=crop&q=85',
       characterArt: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=1200&auto=format&fit=crop&q=85',
       link: '/content/demon-slayer',
-      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4'
+      videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
     },
     {
       id: 'cat-slide-3',
@@ -66,7 +66,7 @@ export default function CategoryHeroSlider({ slides = [], onWatch, defaultCatego
       image: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?w=1600&auto=format&fit=crop&q=85',
       characterArt: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?w=1200&auto=format&fit=crop&q=85',
       link: '/content/naruto-shippuden',
-      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4'
+      videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
     }
   ];
 
