@@ -42,6 +42,15 @@ export async function apiFetch(endpoint, options = {}) {
       }
     }
 
+    // Guard against HTML responses (e.g. backend is down, proxy returns 404 page)
+    const contentType = response.headers.get('content-type') || '';
+    if (!contentType.includes('application/json')) {
+      throw new Error(
+        `Backend unreachable or returned non-JSON response (status ${response.status}). ` +
+        `Make sure the backend server is running on ${API_BASE}.`
+      );
+    }
+
     const data = await response.json();
 
     if (!response.ok) {
